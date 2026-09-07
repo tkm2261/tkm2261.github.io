@@ -18,8 +18,14 @@
 			background-color: #eee;
 		}
 
+		.container {
+			max-width: 62rem;
+		}
+
 		h3 {
-			margin-top: 2rem;
+			margin-top: 2.25rem;
+			padding-bottom: .35rem;
+			border-bottom: 1px solid #ccc;
 		}
 
 		.row {
@@ -31,16 +37,46 @@
 			margin-bottom: 0;
 		}
 
-		[class*="col-"] {
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-			background-color: rgba(86, 61, 124, .15);
-			border: 1px solid rgba(86, 61, 124, .2);
-		}
-
 		hr {
 			margin-top: 2rem;
 			margin-bottom: 2rem;
+		}
+
+		ul {
+			padding-left: 1.2rem;
+		}
+
+		li {
+			margin-bottom: .5rem;
+		}
+
+		.venue {
+			display: inline-block;
+			font-weight: 700;
+			font-size: .82rem;
+			letter-spacing: .02em;
+			color: #563d7c;
+			background-color: rgba(86, 61, 124, .12);
+			border: 1px solid rgba(86, 61, 124, .25);
+			border-radius: 3px;
+			padding: 0 .35rem;
+			margin-right: .25rem;
+			white-space: nowrap;
+		}
+
+		.rate {
+			font-size: .85rem;
+			color: #555;
+			white-space: nowrap;
+		}
+
+		.note {
+			color: #666;
+			font-size: .9rem;
+		}
+
+		.links a {
+			white-space: nowrap;
 		}
 	</style>
 </head>
@@ -54,9 +90,16 @@
 		<p> Ph.D. in Computer Science from the <a href="https://www.ics.uci.edu/">University of California, Irvine</a> (Sep 2024), under the supervision of Prof. <a
 				href="https://www.ics.uci.edu/~alfchen/">Qi Alfred Chen</a>. ML security researcher. Kaggle Grandmaster.</p>
 
-		<p>Research interests: Machine Learning Security, CPS Security, Autonomous Driving Security, Sensor Security, Mathemetical Optimization</p>
+		<p>My research studies physical-world attacks on
+			the sensors and AI perception of autonomous systems &mdash; LiDAR spoofing, camera/optical attacks on traffic
+			sign and traffic light recognition, and adversarial attacks on lane detection &mdash; and, just as
+			importantly, how much these attacks actually matter at the <i>system</i> level, i.e., to the driving
+			behavior of the vehicle.</p>
 
-		<p>
+		<p>Research interests: Machine Learning Security, CPS Security, Autonomous Driving Security, Sensor Security,
+			Mathematical Optimization</p>
+
+		<p class="links">
 			<a href="mailto:takamisato1113[at]gmail.com" target="_blank">Email</a>,
 			<a href="https://github.com/tkm2261" target="_blank">GitHub</a>,
 			<a href="https://www.linkedin.com/in/takami-sato-3292168a/" target="_blank">Linkedin</a>,
@@ -71,83 +114,140 @@
 			<a href="https://scholar.google.com/citations?user=eoElWJcAAAAJ" target="_blank">Google Scholar</a>
 		</p>
 
-		<h3>Selected Publications</h3>
+
+		<h3>Selected Conference Publications</h3>
 		<ul>
 			<li>
-				<b>[NDSS'26]</b> Shaoyuan Xie, Mohamad Habib Fakih, Junchi Lu, Fayzah Alshammari, Ningfei Wang, <b>Takami Sato</b>, Halima Bouzidi, Mohammad Abdullah Al Faruque, and Qi Alfred Chen, FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems
+				<span class="venue">[CoRL'26]</span> Marino Watanabe, <b>Takami Sato</b>, and Kentaro Yoshioka,
+				Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color
+				<span class="rate">(<b>Acceptance Rate: 32.8%</b>)</span>
+				[<a href="https://arxiv.org/abs/2607.14698">paper</a>]
+			</li>
+			<li>
+				<span class="venue">[NDSS'26]</span> Shaoyuan Xie, Mohamad Habib Fakih, Junchi Lu, Fayzah Alshammari, Ningfei Wang, <b>Takami Sato</b>, Halima Bouzidi, Mohammad Abdullah Al Faruque, and Qi Alfred Chen, FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems
+				<span class="rate">(<b>Acceptance Rate: 17.9%</b>)</span>
 				[<a href="https://www.ndss-symposium.org/ndss-paper/flytrap-physical-distance-pulling-attack-towards-camera-based-autonomous-target-tracking-systems/">paper</a>][<a href="https://sites.google.com/view/av-ioat-sec/flytrap">site</a>]
 			</li>
 			<li>
-				<b>[NDSS'25]</b> <b>Takami Sato</b>*, Ryo Suzuki*, Yuki Hayakawa*, Kazuma Ikeda, Ozora Sako, Rokuto
+				<span class="venue">[NDSS'25]</span> <b>Takami Sato</b>*, Ryo Suzuki*, Yuki Hayakawa*, Kazuma Ikeda, Ozora Sako, Rokuto
 				Nagata, Ryo Yoshida, Qi Alfred Chen, and Kentaro Yoshioka, On the Realism of LiDAR Spoofing Attacks
-				against Autonomous Driving Vehicle at High Speed and Long Distance (* denotes co-first)
+				against Autonomous Driving Vehicle at High Speed and Long Distance
+				<span class="rate">(<b>Acceptance Rate: 16.1%</b>)</span> (* denotes co-first)
+				[<a href="https://www.ndss-symposium.org/ndss-paper/on-the-realism-of-lidar-spoofing-attacks-against-autonomous-driving-vehicle-at-high-speed-and-long-distance/">paper</a>]
 			</li>
 			<li>
-				<b>[NDSS'25]</b> Ningfei Wang, Shaoyuan Xie, <b>Takami Sato</b>, Yunpeng Luo, Kaidi Xu, and Qi Alfred
+				<span class="venue">[NDSS'25]</span> Ningfei Wang, Shaoyuan Xie, <b>Takami Sato</b>, Yunpeng Luo, Kaidi Xu, and Qi Alfred
 				Chen, Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems
-				Perspective
+				Perspective <span class="rate">(<b>Acceptance Rate: 16.1%</b>)</span>
+				[<a href="https://arxiv.org/abs/2409.09860">paper</a>]
 			</li>
 			<li>
-				<b>[ICLR'25]</b> Ruochen Jiao, Shaoyuan Xie, Justin Yue, <b>Takami Sato</b>, Lixu Wang, Yixuan Wang, Qi Alfred Chen, and Qi Zhu, Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems
+				<span class="venue">[ICLR'25]</span> Ruochen Jiao, Shaoyuan Xie, Justin Yue, <b>Takami Sato</b>, Lixu Wang, Yixuan Wang, Qi Alfred Chen, and Qi Zhu, Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems
+				<span class="rate">(<b>Acceptance Rate: 32.1%</b>)</span>
+				[<a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/d7af02c8a8e26608199c087f50a21d37-Abstract-Conference.html">paper</a>][<a href="https://github.com/ASGuard-UCI/BALD">code</a>]
 			</li>
 			<li>
-				<b>[ICRA'25]</b> Rokuto Nagata, Kenji Koide, Yuki Hayakawa, Ryo Suzuki, Kazuma Ikeda, Ozora Sako, Qi Alfred Chen, <b>Takami Sato</b>, and Kentaro Yoshioka, SLAMSpoof: Practical LiDAR Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis
+				<span class="venue">[ICRA'25]</span> Rokuto Nagata, Kenji Koide, Yuki Hayakawa, Ryo Suzuki, Kazuma Ikeda, Ozora Sako, Qi Alfred Chen, <b>Takami Sato</b>, and Kentaro Yoshioka, SLAMSpoof: Practical LiDAR Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis
+				<span class="rate">(<b>Acceptance Rate: 38.7%</b>)</span>
+				[<a href="https://arxiv.org/abs/2502.13641">paper</a>][<a href="https://github.com/Keio-CSG/slamspoof">code</a>]
 			</li>
 
 			<li>
-				<b>[CVPR'24]</b> <b>Takami Sato</b>, Justin Yue, Nanze Chen, Ningfei Wang, and Qi Alfred Chen,
+				<span class="venue">[CVPR'24]</span> <b>Takami Sato</b>, Justin Yue, Nanze Chen, Ningfei Wang, and Qi Alfred Chen,
 				Intriguing Properties of Diffusion Models: An Empirical Study of the Natural Attack Capability in
-				Text-to-Image Generative Models (<b>Acceptance Rate: 23.6%</b>) [<a href='https://openaccess.thecvf.com/content/CVPR2024/papers/Sato_Intriguing_Properties_of_Diffusion_Models_An_Empirical_Study_of_the_CVPR_2024_paper.pdf'>paper</a>][<a href="https://sites.google.com/view/av-ioat-sec/ndd-attack">site</a>]
+				Text-to-Image Generative Models <span class="rate">(<b>Acceptance Rate: 23.6%</b>)</span> [<a href='https://openaccess.thecvf.com/content/CVPR2024/papers/Sato_Intriguing_Properties_of_Diffusion_Models_An_Empirical_Study_of_the_CVPR_2024_paper.pdf'>paper</a>][<a href="https://sites.google.com/view/av-ioat-sec/ndd-attack">site</a>]
 			</li>
 			<li>
-				<b>[NDSS'24]</b> <b>Takami Sato</b>*, Yuki Hayakawa*, Ryo Suzuki*, Yohsuke Shiiki*, Kentaro Yoshioka,
-				and Qi Alfred Chen, LiDAR Spoofing Meets the New-Gen: Capability Improvements, Broken Assumptions, and New Attack Strategies (<b>Acceptance Rate: 20.2%</b>) (* denotes co-first)
+				<span class="venue">[NDSS'24]</span> <b>Takami Sato</b>*, Yuki Hayakawa*, Ryo Suzuki*, Yohsuke Shiiki*, Kentaro Yoshioka,
+				and Qi Alfred Chen, LiDAR Spoofing Meets the New-Gen: Capability Improvements, Broken Assumptions, and New Attack Strategies <span class="rate">(<b>Acceptance Rate: 20.2%</b>)</span> (* denotes co-first)
 				[<a href="https://www.ndss-symposium.org/wp-content/uploads/2024-350-paper.pdf">paper</a>][<a href="https://sites.google.com/view/av-ioat-sec/new-gen-lidar-sec">site</a>]
 			</li>
 			<li>
-				<b>[NDSS'24]</b> <b>Takami Sato</b>*, Sri Hrushikesh Varma Bhupathiraju*, Michael Clifford, Takeshi
-				Sugawara, Qi Alfred Chen, Sara Rampazzi, Invisible Reflections: Leveraging Infrared
-				Laser Reflections to Target Traffic Sign Perception (<b>Acceptance Rate: 20.2%</b>) (* denotes co-first)
+				<span class="venue">[NDSS'24]</span> <b>Takami Sato</b>*, Sri Hrushikesh Varma Bhupathiraju*, Michael Clifford, Takeshi
+				Sugawara, Qi Alfred Chen, and Sara Rampazzi, Invisible Reflections: Leveraging Infrared
+				Laser Reflections to Target Traffic Sign Perception <span class="rate">(<b>Acceptance Rate: 20.2%</b>)</span> (* denotes co-first)
+				[<a href="https://www.ndss-symposium.org/ndss-paper/invisible-reflections-leveraging-infrared-laser-reflections-to-target-traffic-sign-perception/">paper</a>]
 			</li>
 			<li>
-				<b>[VehicleSec'24]</b> <b>Takami Sato</b>, Ningfei Wang, Yueqiang Cheng, and Qi Alfred Chen, A Cross-Verification Approach with Publicly Available Map for Detecting Off-Road Attacks against Lane Detection Systems
+				<span class="venue">[VehicleSec'24]</span> <b>Takami Sato</b>, Ningfei Wang, Yueqiang Cheng, and Qi Alfred Chen, A Cross-Verification Approach with Publicly Available Map for Detecting Off-Road Attacks against Lane Detection Systems
+				<span class="rate">(<b>Acceptance Rate: 43.1%</b>)</span>
+				[<a href="https://www.ndss-symposium.org/wp-content/uploads/vehiclesec2024-32-paper.pdf">paper</a>]
 			</li>
 			<li>
-				<b>[ICCV'23]</b>Ningfei Wang, Yunpeng Luo, <b>Takami Sato</b>, Kaidi Xu, and Qi Alfred Chen,
-				Does Physical Adversarial Example Really Matter to Autonomous Driving? Towards System-Level Effect of Adversarial Object Evasion Attack (<b>Acceptance Rate: 26.2%</b>) [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Does_Physical_Adversarial_Example_Really_Matter_to_Autonomous_Driving_Towards_ICCV_2023_paper.pdf">paper</a>]
+				<span class="venue">[ICCV'23]</span> Ningfei Wang, Yunpeng Luo, <b>Takami Sato</b>, Kaidi Xu, and Qi Alfred Chen,
+				Does Physical Adversarial Example Really Matter to Autonomous Driving? Towards System-Level Effect of Adversarial Object Evasion Attack <span class="rate">(<b>Acceptance Rate: 26.2%</b>)</span> [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Does_Physical_Adversarial_Example_Really_Matter_to_Autonomous_Driving_Towards_ICCV_2023_paper.pdf">paper</a>]
 			</li>
 			<li>
-				<b>[ICCV'23]</b>Ruochen Jiao, Xiangguo Liu, <b>Takami Sato</b>, Qi Alfred Chen, and Qi Zhu,
-				Semi-Supervised Semantics-Guided Adversarial Training for Trajectory Prediction (<b>Acceptance Rate:
-					26.2%</b>) [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Jiao_Semi-supervised_Semantics-guided_Adversarial_Training_for_Robust_Trajectory_Prediction_ICCV_2023_paper.pdf">paper</a>]
+				<span class="venue">[ICCV'23]</span> Ruochen Jiao, Xiangguo Liu, <b>Takami Sato</b>, Qi Alfred Chen, and Qi Zhu,
+				Semi-Supervised Semantics-Guided Adversarial Training for Trajectory Prediction <span class="rate">(<b>Acceptance Rate:
+					26.2%</b>)</span> [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Jiao_Semi-supervised_Semantics-guided_Adversarial_Training_for_Robust_Trajectory_Prediction_ICCV_2023_paper.pdf">paper</a>]
 			</li>
 			<li>
-				<b>[IROS'23]</b> Ruochen Jiao, Juyang Bai, Xiangguo Liu, <b>Takami Sato</b>, Xiaowei Yuan, Qi Alfred
-				Chen, and Qi Zhu, Learning Representation for Anomaly Detection of Vehicle Trajectories (<b>Acceptance Rate: 43%</b>) [<a href="https://ieeexplore.ieee.org/document/10342070">paper</a>]
+				<span class="venue">[IROS'23]</span> Ruochen Jiao, Juyang Bai, Xiangguo Liu, <b>Takami Sato</b>, Xiaowei Yuan, Qi Alfred
+				Chen, and Qi Zhu, Learning Representation for Anomaly Detection of Vehicle Trajectories <span class="rate">(<b>Acceptance Rate: 43%</b>)</span> [<a href="https://ieeexplore.ieee.org/document/10342070">paper</a>]
 			</li>
 			<li>
-				<b>[CVPR'22]</b> <b>Takami Sato</b> and Qi Alfred Chen, Towards Driving-Oriented Metric for Lane
-				Detection Models (<b>Acceptance Rate: 25.3%</b>)
+				<span class="venue">[CVPR'22]</span> <b>Takami Sato</b> and Qi Alfred Chen, Towards Driving-Oriented Metric for Lane
+				Detection Models <span class="rate">(<b>Acceptance Rate: 25.3%</b>)</span>
 				[<a
 					href="https://openaccess.thecvf.com/content/CVPR2022/papers/Sato_Towards_Driving-Oriented_Metric_for_Lane_Detection_Models_CVPR_2022_paper.pdf">paper</a>]
 				[<a href="https://sites.google.com/view/cav-sec/ld-metric">site</a>]
 			</li>
 			<li>
-				<b>[Usenix Security'21]</b> <b>Takami Sato</b>*, Junjie Shen*, Ningfei Wang, Yunhan Jack Jia, Xue Lin,
+				<span class="venue">[Usenix Security'21]</span> <b>Takami Sato</b>*, Junjie Shen*, Ningfei Wang, Yunhan Jack Jia, Xue Lin,
 				and Qi Alfred Chen, Dirty Road Can Attack: Security of Deep Learning based Automated Lane Centering
-				under Physical-World Attack (<b>Acceptance Rate: 18.7%</b>) (* denotes co-first authors)
+				under Physical-World Attack <span class="rate">(<b>Acceptance Rate: 18.7%</b>)</span> (* denotes co-first authors)
 				[<a href="https://www.usenix.org/conference/usenixsecurity21/presentation/sato">paper</a>]
-				[<a href="https://sites.google.com/view/cav-sec/drp-attack/">demo</a>] <br>
+				[<a href="https://sites.google.com/view/cav-sec/drp-attack/">demo</a>]
 			</li>
 			<li>
-				<b>[IV'21]</b> Ruochen Jiao, Hengyi Liang, <b>Takami Sato</b>, Junjie Shen, Qi Alfred Chen, and Qi Zhu,
-				End-to-end Uncertainty-based Mitigation of Adversarial Attacks to Automated Lane Centering (<b>Acceptance Rate: 49.3%</b>)
+				<span class="venue">[IV'21]</span> Ruochen Jiao, Hengyi Liang, <b>Takami Sato</b>, Junjie Shen, Qi Alfred Chen, and Qi Zhu,
+				End-to-end Uncertainty-based Mitigation of Adversarial Attacks to Automated Lane Centering <span class="rate">(<b>Acceptance Rate: 49.3%</b>)</span>
 				[<a href="https://arxiv.org/abs/2103.00345">paper</a>]
+			</li>
+		</ul>
+		<p class="note">Acceptance rates are the overall rates reported by each conference for that year.</p>
+
+		<h3>Journal Articles</h3>
+		<ul>
+			<li>
+				<span class="venue">[ACM TCPS'26]</span> Sri Hrushikesh Varma Bhupathiraju, <b>Takami Sato</b>, Michael
+				Clifford, Takeshi Sugawara, Qi Alfred Chen, and Sara Rampazzi, To Go or Not to Go: Shedding Light on
+				Traffic Light Signal Manipulation and Defense Strategies, <i>ACM Transactions on Cyber-Physical
+					Systems</i>, 2026. [<a href="https://dl.acm.org/doi/10.1145/3777451">paper</a>]
+			</li>
+			<li>
+				<span class="venue">[IEEE Sensors J.'25]</span> Ryo Suzuki, <b>Takami Sato</b>, Yuki Hayakawa, Kazuma
+				Ikeda, Ozora Sako, Rokuto Nagata, Ryo Yoshida, Qi Alfred Chen, and Kentaro Yoshioka, From Lab to Road:
+				Realizing and Detecting LiDAR Spoofing Attacks Against Autonomous Vehicles at High Speed and Long
+				Distance, <i>IEEE Sensors Journal</i>, 25(13):25661&ndash;25681, 2025.
+				[<a href="https://doi.org/10.1109/JSEN.2025.3565532">paper</a>]
+			</li>
+			<li>
+				<span class="venue">[IEEE Sensors J.'25]</span> Yuki Hayakawa, <b>Takami Sato</b>, Ryo Suzuki, Kazuma
+				Ikeda, Ozora Sako, Rokuto Nagata, Ryo Yoshida, Qi Alfred Chen, and Kentaro Yoshioka, Breaking the
+				Shield: Systematic Security Analysis on Pulse Fingerprinting LiDAR Systems for Autonomous Driving,
+				<i>IEEE Sensors Journal</i>, 25(11):20523&ndash;20537, 2025.
+				[<a href="https://doi.org/10.1109/JSEN.2025.3558401">paper</a>]
 			</li>
 		</ul>
 
 		<h3>Preprints</h3>
 		<ul>
+			<li>
+				Ryo Yoshida, <b>Takami Sato</b>, Wenlun Zhang, Yuki Hayakawa, Shota Nagai, Takahiro Kado, Taro Beppu,
+				Ibuki Fujioka, Yunshan Zhong, and Kentaro Yoshioka,
+				Neural Reconstruction of LiDAR Point Clouds under Jamming Attacks via Full-Waveform Representation and
+				Simultaneous Laser Sensing,
+				arXiv preprint <a href='https://arxiv.org/abs/2604.00371'>arXiv:2604.00371</a>, 2026.
+			</li>
+			<li>
+				Go Tsuruoka, <b>Takami Sato</b>, Qi Alfred Chen, Kazuki Nomoto, Ryunosuke Kobayashi, Yuna Tanaka, and
+				Tatsuya Mori,
+				Trapped by Their Own Light: Deployable and Stealth Retroreflective Patch Attacks on Traffic Sign
+				Recognition Systems,
+				arXiv preprint <a href='https://arxiv.org/abs/2511.10050'>arXiv:2511.10050</a>, 2025.
+			</li>
 			<li>
 				Ryota Ueda, <b>Takami Sato</b>, Ken Kobayashi, and Kazuhide Nakata,
 				Interior-Point Vanishing Problem in Semidefinite Relaxations for Neural Network Verification,
@@ -160,33 +260,94 @@
 			</li>
 			<li>
 				Junjie Shen, Ningfei Wang, Ziwen Wan, Yunpeng Luo, <b>Takami Sato</b>, Zhisheng Hu, Xinyang Zhang,
-				Shengjian Guo, Zhenyu Zhong, Kang Li, Ziming Zhao, Chunming Qiao, Qi Alfred Chen,
-				SoK: On the Semantic AI Security in Autonomous Driving <a
+				Shengjian Guo, Zhenyu Zhong, Kang Li, Ziming Zhao, Chunming Qiao, and Qi Alfred Chen,
+				SoK: On the Semantic AI Security in Autonomous Driving, arXiv preprint <a
 					href='https://arxiv.org/abs/2203.05314'>arXiv:2203.05314</a>, 2022.
 			</li>
 		</ul>
-		<h3>Poster</h3>
+
+		<h3>Posters</h3>
 		<ul>
-			<li><b>[CCS'22] </b>
-				<b>Takami Sato</b>, Yuki Hayakawa, Ryo Suzuki, Yohsuke Shiiki, Kentaro Yoshioka, Qi Alfred Chen,
-				Towards Large-Scale Measurement Study on LiDAR Spoofing Attacks against Object Detection,
+			<li><span class="venue">[CCS'22]</span>
+				<b>Takami Sato</b>, Yuki Hayakawa, Ryo Suzuki, Yohsuke Shiiki, Kentaro Yoshioka, and Qi Alfred Chen,
+				Towards Large-Scale Measurement Study on LiDAR Spoofing Attacks against Object Detection
+				[<a href="https://doi.org/10.1145/3548606.3563537">abstract</a>]
 			</li>
-			<li><b>[NDSS'22] </b>
-				<b>Takami Sato</b>, Junjie Shen, Ningfei Wang, Yunhan Jack Jia, Xue Lin, Qi Alfred Chen,
+			<li><span class="venue">[NDSS'20]</span>
+				<b>Takami Sato</b>, Junjie Shen, Ningfei Wang, Yunhan Jack Jia, Xue Lin, and Qi Alfred Chen,
 				Security of Deep Learning based Lane Keeping Assistance System under Physical-World Adversarial Attack
 				[<a href="papers/ndss20-poster-abstract.pdf">abstract</a>][<a
 					href="https://sites.google.com/view/lane-keeping-adv-attack/">demo</a>]
-				<b>Best Technical Poster Award</b>
+				<b>Best Technical Poster Award (Top 1/30)</b>
 			</li>
+		</ul>
+
+		<h3>Invited Talks</h3>
+		<ul>
+			<li><b>Mar. 2026</b> &mdash; The 38th JASS (Japan-America Student Summit), Stanford University: "Autonomous
+				Driving Security and Life in the Academic Security Community" [Japanese]</li>
+			<li><b>Sep. 2024</b> &mdash; FIT 2024 Top Conference Session, Japan: LiDAR Spoofing Meets the New-Gen
+				(NDSS'24)</li>
+		</ul>
+
+		<h3>Media Coverage</h3>
+		<ul>
+			<li><b>Mar. 2025</b>, UC Irvine News, <a
+					href="https://news.uci.edu/2025/03/04/uc-irvine-study-shines-headlights-on-consumer-driverless-vehicle-safety-deficiencies/">UC
+					Irvine study shines headlights on consumer driverless vehicle safety deficiencies</a> (NDSS'25
+				traffic sign recognition study)</li>
+			<li><b>Feb. 2025</b>, Keio University &amp; JST joint press release, <a
+					href="https://www.keio.ac.jp/ja/press-releases/2025/2/25/28-165309/">Discovery that autonomous
+					driving sensors can be disabled from a long distance while driving</a> [Japanese]; also covered by
+				Nikkei, Nikkei xTECH, and Jidounten Lab</li>
+			<li><b>Feb. 2024</b>, UC Irvine News, <a
+					href="https://news.uci.edu/2024/02/29/autonomous-vehicle-technology-vulnerable-to-road-object-spoofing-and-vanishing-attacks">Autonomous
+					vehicle technology vulnerable to road object spoofing and vanishing attacks</a> (NDSS'24 new-gen
+				LiDAR study)</li>
+			<li><b>Feb. 2024</b>, Automotive News, <a
+					href="https://www.autonews.com/mobility-report/lidar-spoofing-poses-risks-av-technology">Lidar
+					sensors vulnerable to spoofing attacks, researchers say</a> (NDSS'24)</li>
+			<li><b>Feb. 2024</b>, IoT World Today, <a
+					href="https://www.iotworldtoday.com/transportation-logistics/self-driving-tech-vulnerable-to-attack-study-finds">Self-Driving
+					Tech Vulnerable to Attack, Study Finds</a> (NDSS'24)</li>
+			<li><b>Feb. 2024</b>, Electro Optics, <a
+					href="https://www.electrooptics.com/article/autonomous-lidar-can-be-spoofed-performing-unsafe-actions-study-finds">Autonomous
+					lidar can be spoofed into performing unsafe actions, study finds</a> (NDSS'24)</li>
+			<li><b>Feb. 2024</b>, Keio University &amp; JST joint press release, <a
+					href="https://www.keio.ac.jp/ja/press-releases/2024/2/13/28-156857/">World's first comprehensive
+					security study of LiDAR sensors for autonomous driving</a> [Japanese]
+				(<a href="https://www.jst.go.jp/pr/announce/20240213-3/index.html">JST</a>) (NDSS'24)</li>
+			<li><b>Feb. 2024</b>, Nikkei, <a
+					href="https://www.nikkei.com/article/DGXZRSP668333_T10C24A2000000/">Keio University and UC Irvine
+					jointly conduct a comprehensive security study of LiDAR sensors for autonomous driving</a>
+				[Japanese] (NDSS'24)</li>
+			<li><b>Feb. 2024</b>, Nikkei xTECH, <a
+					href="https://xtech.nikkei.com/atcl/nxt/news/24/00252/">Vulnerability in LiDAR for autonomous
+					driving: Keio University and others confirm object removal via the HFR attack</a> [Japanese]
+				(NDSS'24)</li>
+			<li><b>Jan. 2024</b>, ITmedia NEWS, <a
+					href="https://www.itmedia.co.jp/news/articles/2401/25/news049.html">Shining a laser invisible to
+					humans on road signs: an attack that deceives autonomous vehicles, presented by US and Japanese
+					researchers</a> [Japanese] (NDSS'24 Invisible Reflections)</li>
+			<li><b>Mar. 2023</b>, UC Irvine ICS, <a
+					href="https://ics.uci.edu/2023/03/14/computer-science-ph-d-candidate-takami-sato-named-public-impact-fellow/">Computer
+					Science Ph.D. Candidate Takami Sato Named Public Impact Fellow</a></li>
+			<li><b>Oct. 2020</b>, UC Irvine ICS, <a
+					href="https://ics.uci.edu/2020/10/01/asguard-wins-baidu-autodriving-cts-competition/">ICS Team
+					Takes 1st Place at Baidu's AutoDriving Capture the Flag Competition</a></li>
+			<li><b>Jul. 2013</b>, ITmedia Marketing, <a
+					href="https://marketing.itmedia.co.jp/mm/articles/1307/10/news100.html">Google and others conduct a
+					survey on online campaigning in the House of Councillors election</a> [Japanese]</li>
 		</ul>
 
 		<h3>Paper Review and Program Committee Experiences</h3>
 		<ul>
 			<li>Outstanding Reviewer, European Conference on Computer Vision (ECCV) 2024</li>
-			<li>Program committee of IEEE European Symposium on Security and Privacy (EuroS&P) 2024</li>
-			<li>Program committee of CPSIoTSec 2023</li>
-			<li>Program committee of IEEE Mobility, Sensing and Networking (MSN) 2023</li>
+			<li>Program committee of USENIX Security Symposium 2027</li>
 			<li>Program committee of Association for the Advancement of Artificial Intelligence (AAAI) 2026</li>
+			<li>Program committee of IEEE European Symposium on Security and Privacy (EuroS&P) 2024</li>
+			<li>Program committee of CPSIoTSec 2023, 2024</li>
+			<li>Program committee of IEEE Mobility, Sensing and Networking (MSN) 2023</li>
 			<li>Reviewer of International Conference on Artificial Intelligence and Statistics (AISTATS) 2025</li>
 			<li>Reviewer of International Conference on Machine Learning (ICML) 2025</li>
 			<li>Reviewer of International Conference on Learning Representations (ICLR) 2025</li>
@@ -212,25 +373,30 @@
 		<h3>Awards and Honors</h3>
 		<ul>
 			<li><b>Outstanding Reviewer</b>, European Conference on Computer Vision (ECCV) 2024</li>
+			<li><b>DENSO Best Demo Award</b>, VehicleSec 2023 (Infrared Laser Reflection Attack against Traffic Sign
+				Recognition Systems)</li>
+			<li><b>ETAS Best Short/WIP Paper Award Runner-Up</b>, VehicleSec 2023 (Practical Removal Attacks on
+				LiDAR-based Object Detection in Autonomous Driving)</li>
 			<li><b>$5,000 Awards</b>, Graduate Dean’s Dissertation Fellowship, UCI Graduate Division, 2023</li>
-			<li><b>$1,000 Awards</b>, Public Impact Fellowship, UCI Graduate Division, 2023</li>
+			<li><b>$1,000 Awards</b>, Public Impact Fellowship, UCI Graduate Division, 2022</li>
 			<li><b>1st place (RTX A6000 + HP Laptop)</b>, <a
 					href="https://www.linkedin.com/feed/update/urn:li:activity:6992456653623181312/">Kaggle Days x Z by
 					HP World Championship Final</a> in Barcelona, Spain, 2022</li>
 			<li><b>2nd place ($7.5k prize)</b>, Kaggle, Foursquare Location Matching (<b>Top 2/1079</b>), 2022</li>
 			<li><b>2nd place</b>, Kaggle days x Z by HP world championship at San Francisco (<b>Top 2/82</b>), 2022</li>
-			<li><b>2nd place ($8k prize)</b>, Kaggle, PetFinder.my - Pawpularity Contest, 2022</li>
+			<li><b>2nd place ($8k prize)</b>, Kaggle, PetFinder.my - Pawpularity Contest (<b>Top 2/3537</b>), 2022</li>
 			<li>Earned the <a href="https://www.kaggle.com/tkm2261">Kaggle Grandmaster</a> title (Only 240+ Kaggle
-				Grandmasters in the world)</b>, 2021</li>
-			<li><b>2nd place ($1k prize)</b>, Kaggle, chaii - Hindi and Tamil Question Answering, 2021</li>
+				Grandmasters in the world), 2021</li>
+			<li><b>2nd place ($1k prize)</b>, Kaggle, chaii - Hindi and Tamil Question Answering (<b>Top 2/943</b>), 2021</li>
 			<li><b>$3,000 award</b>, The Beall Family Foundation Graduate Student Entrepreneur Award in Computer
 				Science, 2021</li>
-			<li><b>$10,000 prize (2th place)</b>, <a href="https://www.kaggle.com/c/shopee-product-matching/">Shopee -
+			<li><b>$10,000 prize (2nd place)</b>, <a href="https://www.kaggle.com/c/shopee-product-matching/">Shopee -
 					Price Match Guarantee</a> <b>(Top 2/2462)</b>, 2021</li>
 			<li><b>1st place (Champion)</b>, <a href="https://anquan.baidu.com/bctf/#/en/innovation/rankingList">Baidu
 					AutoDriving CTF</a> <b>(Top 1/24)</b>, 2020</li>
 			<li><b>Gold Medal (5th place)</b>, <a href="https://www.kaggle.com/c/tweet-sentiment-extraction/">Kaggle
 					Tweet Sentiment Extraction</a> <b>(Top 5/2227)</b>, 2020</li>
+			<li><b>Best Technical Poster Award</b>, NDSS 2020 <b>(Top 1/30)</b></li>
 			<li><b>Silver Medal (23rd place, solo)</b>, <a
 					href="https://www.kaggle.com/c/santa-workshop-tour-2019/">Kaggle Santa's Workshop Tour 2019</a>
 				<b>(Top 23/1620 and optimal solution obtained)</b>, 2019</li>
@@ -238,11 +404,11 @@
 					href="https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection">TalkingData AdTracking Fraud
 					Detection Challenge</a> <b>(Top 11/3946)</b>, 2018</li>
 			<li>Earned the <a href="https://www.kaggle.com/tkm2261">Kaggle Master</a> title (Top 1% Kaggle competitors
-				worldwide)</b>, 2017</li>
+				worldwide), 2017</li>
 			<li><b>Gold Medal (15th place, solo)</b>, <a
 					href="https://www.kaggle.com/c/instacart-market-basket-analysis">Kaggle Instacart Market Basket
-					Analysis <b>(Top 15/2622)</b>, 2017</a></li>
-			<li><b>Silver Medal (17th place ,solo)</b>, <a href="https://www.kaggle.com/c/quora-question-pairs">Kaggle
+					Analysis</a> <b>(Top 15/2622)</b>, 2017</li>
+			<li><b>Silver Medal (17th place, solo)</b>, <a href="https://www.kaggle.com/c/quora-question-pairs">Kaggle
 					Quora Question Pairs</a> <b>(Top 17/3304)</b>, 2017</li>
 			<li><b>Silver Medal (17th place)</b>, <a
 					href="https://www.kaggle.com/c/bosch-production-line-performance">Kaggle Bosch Production Line
@@ -253,9 +419,9 @@
 
 		<h3>Industry Experience</h3>
 		<ul>
-			<li>Sep. 2024 - Present: Machine Learning Engineer, Uber Technologies, Inc</li>
+			<li>Sep. 2024 - Present: Machine Learning Engineer II, Uber Technologies, Inc.</li>
 			<li>June 2024 - Sep. 2024: Ph.D. Research Intern, Qualcomm Incorporated</li>
-			<li>June 2023 - Sep. 2023: Ph.D. Research Software Engineer Intern, Uber Technologies, Inc</li>
+			<li>June 2023 - Sep. 2023: Ph.D. Research Software Engineer Intern, Uber Technologies, Inc.</li>
 			<li>June 2022 - Sep. 2022: Internship Security Researcher, Toyota InfoTech Labs</li>
 			<li>Mar. 2021 - Sep. 2021: Internship Security Researcher, NIO Inc.</li>
 			<li>July 2017 - Aug. 2018: Machine Learning Engineer, Freelance</li>
@@ -266,13 +432,15 @@
 		<h3>Education</h3>
 		<ul>
 			<li>Sep. 2024: Ph.D. in Computer Science - University of California, Irvine (Supervisor: Prof. <a
-					href="https://www.ics.uci.edu/~alfchen/">Qi Alfred Chen</a>)</li>
+					href="https://www.ics.uci.edu/~alfchen/">Qi Alfred Chen</a>)<br>
+				<span class="note">Dissertation: Exploring Novel Security Vulnerabilities and Their Safety Implications
+					in Sensors and Perception for Autonomous Systems</span></li>
 			<li>Sept. 2019: M.S. in Computer Science - University of California, Irvine (Supervisor: Prof. <a
 					href="https://www.ics.uci.edu/~alfchen/">Qi Alfred Chen</a>)</li>
 			<li>March 2013: M.Eng of Industrial Engineering and Management - Tokyo Institute of Technology (Supervisor:
-				Prof. <a href="http://www.me.titech.ac.jp/~nakata/nakata_en.html">Kazuhide Nakata</a>)</li>
+				Prof. <a href="https://isct-nakatalab.github.io/">Kazuhide Nakata</a>)</li>
 			<li>March 2011: B.Eng of Industrial Engineering and Management - Tokyo Institute of Technology (Supervisor:
-				Prof. <a href="http://www.me.titech.ac.jp/~nakata/nakata_en.html">Kazuhide Nakata</a>)</li>
+				Prof. <a href="https://isct-nakatalab.github.io/">Kazuhide Nakata</a>)</li>
 		</ul>
 	</div>
 
